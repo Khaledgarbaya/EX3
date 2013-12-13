@@ -13,11 +13,21 @@
 #include <iostream>
 #include <assert.h>
 
+#include "Math/Core/Float4.h"
+
+#include "Graphics/Shaders/States/AlphaState.h"
+#include "Graphics/Shaders/States/CullState.h"
+#include "Graphics/Shaders/States/DepthState.h"
+#include "Graphics/Shaders/States/StencilState.h"
+#include "Graphics/Shaders/States/OffsetState.h"
+#include "Graphics/Shaders/States/WireState.h"
+
 using namespace EX3;
 
 //----------------------------------------------------------------------------
 int main(int argc, char* argv[])
 {
+    // Math/Geom
     Tuple* tuple = new Tuple();
     delete tuple;
 
@@ -36,11 +46,35 @@ int main(int argc, char* argv[])
     Plane* plane = new Plane();
     delete plane;
 
+    // Graphics/Resources
     IndexBuffer* indexBuffer = new IndexBuffer(3, 2);
     delete indexBuffer;
 
     VertexBuffer* vertexBuffer = new VertexBuffer(3, 4);
     delete vertexBuffer;
+
+    Float4* float4 = new Float4();
+    delete float4;
+
+    // Graphics/Shaders/States
+    AlphaState* alphaState = new AlphaState();
+    delete alphaState;
+
+    CullState* cullState = new CullState();
+    delete cullState;
+
+    DepthState* depthState = new DepthState();
+    delete depthState;
+
+    StencilState* stencilState = new StencilState();
+    delete stencilState;
+
+    OffsetState* offsetState = new OffsetState();
+    delete offsetState;
+
+    WireState* wireState = new WireState();
+    delete wireState;
+
 
     return 0;
 }
