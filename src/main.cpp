@@ -1,7 +1,21 @@
+///////////////////////////////////////////////////////////////////////////////
+//                                                                           //
+//  Distributed under the MIT License  - http://opensource.org/licenses/MIT  //
+//                                                                           //
+//  Copyright (c) 2013 Gary Paluk      - http://www.plugin.io                //
+//  Copyright (c) 2013 Panutat Tejasen - http://www.jimmysoftware.com        //
+//                                                                           //
+///////////////////////////////////////////////////////////////////////////////
+
 #include "MathHeaders.h"
+#include "GraphicsHeaders.h"
+
+#include <iostream>
+#include <assert.h>
 
 using namespace EX3;
 
+//----------------------------------------------------------------------------
 int main(int argc, char* argv[])
 {
     Tuple* tuple = new Tuple();
@@ -22,5 +36,12 @@ int main(int argc, char* argv[])
     Plane* plane = new Plane();
     delete plane;
 
+    IndexBuffer* indexBuffer = new IndexBuffer(3, 2);
+    delete indexBuffer;
+
+    VertexBuffer* vertexBuffer = new VertexBuffer(3, 4);
+    delete vertexBuffer;
+
     return 0;
 }
+//----------------------------------------------------------------------------
